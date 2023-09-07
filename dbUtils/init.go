@@ -1,4 +1,6 @@
 package dbUtils
 
-func initDB() {
+import "database/sql"
+
+func initDB(db *sql.DB) {
 }
