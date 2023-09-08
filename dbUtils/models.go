@@ -7,21 +7,14 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-type Record struct {
-	ID  int    `json:"id"`
-	URL string `json:"url"`
-}
-
 type DBClient struct {
 	DB *sql.DB
 }
 
-type CreateShortURLBody struct {
-	URL string `json:"url"`
-}
-
 func (driver *DBClient) CreateShortURL(c *gin.Context) {
-	var reqBody CreateShortURLBody
+	var reqBody struct {
+		URL string `json:"url"`
+	}
 	c.Bind(&reqBody)
 
 	var id int
