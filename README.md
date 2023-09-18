@@ -1,4 +1,4 @@
-# # go-url-shortener
+# go-url-shortener
 This repo contains a simple implementation of go url shortener created using Gin Framework and sqlite.
 
 ## Pre-requisites
